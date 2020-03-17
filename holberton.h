@@ -12,4 +12,5 @@ int print_string(va_list vl);
 int print_char(va_list vl);
 int print_per(void);
 int calcule(va_list vl, char c);
+int _putchar(char c);
 #endif
