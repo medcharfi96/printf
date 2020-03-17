@@ -6,11 +6,10 @@
  * @format: char
  * Return: int(mean true)
  */
-
 int _printf(const char *format, ...)
 {
 va_list vl;
-unsigned int resultat = 0, sum = 0, i = 0;
+int resultat = 0, sum = 0, i = 0;
 
 if (format == NULL)
 {
@@ -20,10 +19,9 @@ return (resultat);
 va_start(vl, format);
 while ((format != NULL))
 {
-if (format[i] != '%')
+if (format[i] == '%')
 {
 i++;
-_putchar(format[i]);
 }
 else if (format[i + 1] == '\0')
 {
@@ -39,4 +37,4 @@ i++;
 }
 va_end(vl);
 return (sum);
-:}
+}
