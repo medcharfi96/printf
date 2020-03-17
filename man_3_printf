@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 \" Manpage for Charfi Mohamed and Jaber Taoufik to printf function
 .TH man 3 "13/03/2020" "_printf man page"
 SH NAME
@@ -6,13 +7,31 @@ _printf \- Give an output with the demanded format²
 .SH SYNOPSIS
 #include <stdarg.h>
 #include "holberton.h"
+=======
+\" Manpage for CharfiMohamed and JaberTaoufik to printf function
+.TH man 3 "13/03/2020" "_printf man page"
+SH NAME
+_printf \- Give an output with the demanded format²
+- Geting an output
+.SH SYNOPSIS
+#include <stdarg.h>
+#include "holberton.h" 
+>>>>>>> 96cf3ecf7d42c1529b12d42831c2c8d38685fa31
 
 int _printf(const char *format, ...)
 .SH DESCRIPTION
 write the output under the choosen format given under the string format
 .SH OPTIONS
+<<<<<<< HEAD
 No argument is converted even if it does not have the obligatory  format.
 .SH BUGS
 No known bugs for now :)
 .SH AUTHOR
 Mohamed Charfi (https://github.com/medcharfi96) and Taoufik Jaber (https://github.com/Eltotino)
+=======
+No argument is converted even he dont have the obligatory  format.
+.SH BUGS
+No known bugs for now :)
+.SH AUTHOR
+Mouhamed Charfi (https://github.com/medcharfi96) and Taoufik Jaber (https://github.com/Eltotino)
+>>>>>>> 96cf3ecf7d42c1529b12d42831c2c8d38685fa31
