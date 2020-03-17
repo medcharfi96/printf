@@ -7,7 +7,11 @@
 
 int print_char(va_list vl)
 {
-return (_putchar(va_arg(vl, int)));
+char c;
+
+c =(va_arg(vl, int));
+ _putchar(c);
+return (1);
 }
 /**
  * print_per - afiicher le symbole %
