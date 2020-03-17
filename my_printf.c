@@ -31,7 +31,7 @@ else if (format[i + 1] == ' ')
 i++;
 }
 else
-sum = sum + calcule(vl, format[i + 1]);
+sum += calcule(vl, format[i + 1]);
 i++;
 }
 va_end(vl);
