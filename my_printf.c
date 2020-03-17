@@ -9,22 +9,33 @@
 int _printf(const char *format, ...)
 {
 va_list vl;
-int resultat = 0, sum = 0, i = 0;
+unsigned int resultat = 0, sum = 0, i = 0;
+
 if (format == NULL)
+{
 resultat = -1;
 return (resultat);
+}
 va_start(vl, format);
-while ((format != NULL) && (format[i] != '\0'))
+while ((format != NULL))
 {
 if (format[i] != '%')
-sum++;
-else if (format[i] == '%' && format[i + 1] != '\0')
 {
-sum++;
-resultat = sum;
+i++;
+_putchar(format[i]);
 }
-sum+=2;
+else if (format[i + 1] == '\0')
+{
+return (-1);
 }
-resultat = sum;
-return (resultat);
+else if (format[i + 1] == ' ')
+{
+i++;
+}
+else
+sum = sum + calcule(vl, format[i + 1]);
+i++;
+}
+va_end(vl);
+return (sum);
 }
