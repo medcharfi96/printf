@@ -1,5 +1,6 @@
 #include "holberton.h"
-
+#include <stdarg.h>
+#include <stdio.h>
 /**
  * _printf - print the string
  * @format: char
@@ -38,4 +39,4 @@ i++;
 }
 va_end(vl);
 return (sum);
-}
+:}
