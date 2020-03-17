@@ -1,5 +1,5 @@
 #include "holberton.h"
-
+#include <unistd.h>
 /**
  * _printf - print the string
  * @format: char
@@ -8,7 +8,7 @@
 int _printf(const char *format, ...)
 {
 va_list vl;
-int resultat = 0, sum = 0, i = 0;
+int z = 0, resultat = 0, sum = 0, i = 0;
 
 if (format == NULL)
 {
@@ -31,7 +31,10 @@ else if (format[i + 1] == ' ')
 i++;
 }
 else
-sum += calcule(vl, format[i + 1]);
+{
+z = calcule(vl, format[i +1]);
+sum += z;
+}
 i++;
 }
 va_end(vl);
