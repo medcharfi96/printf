@@ -62,11 +62,11 @@ int calcule(va_list vl, char c)
 {
 arg arr[] = {{"c", is_a_char}, {"s", is_a_string}, {"%", is_percent}, {NULL, NULL}};
 int j = 0;
-while (array[j].format != NULL)
+while (arr[j].format != NULL)
 {
-if (array[j].format[0] == c)
+if (arr[j].format[0] == c)
 {
-return (array[j].f(vl));
+return (arr[j].f(vl));
 }
 j++;
 }
