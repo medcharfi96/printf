@@ -5,8 +5,8 @@
 typedef struct format
 {
 char *format;
-int (*f)(va_list vl);
-}frt;
+int (*f)(va_list);
+}frr;
 int _printf(const char *format, ...);
 int print_string(va_list vl);
 int print_char(va_list vl);

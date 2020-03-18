@@ -10,9 +10,10 @@ int print_char(va_list vl)
 char c;
 
 c =(va_arg(vl, int));
- _putchar(c);
+_putchar(c);
 return (1);
 }
+
 /**
  * print_per - afiicher le symbole %
  * Return: int(mean true laffichage de  % est fait)
@@ -22,9 +23,8 @@ int print_per(void)
 {
 char sym = '%';
 
-return (_putchar(sym));
+return (_putchar('%'));
 }
-
 
 /**
  * print_string - print a string
@@ -64,13 +64,18 @@ return (count);
 
 int calcule(va_list vl, char c)
 {
-frt arr[] = {{"c", print_char}, {"s", print_string}, {"%", print_per}, {NULL, NULL}};
-int res = 0,j = 0;
-while (arr[j].format != NULL)
+format arr[] = {
+{"c", print_char}, 
+{"s", print_string}, 
+{"%", print_per}, 
+{NULL, NULL}
+};
+int res = 0, j = 0;
+while (arr[j]->format != NULL)
 {
-if (arr[j].format[0] == c)
+if (arr[j]->format[0] == c)
 {
-return (arr[j].f(vl));
+return (arr[j]->f(vl));
 }
 j++;
 }
